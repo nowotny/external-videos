@@ -5,12 +5,12 @@ Original readme.txt follows...
 External Videos
 ===============
 
-Contributors: silviapfeiffer1, johnfjohnf  
+Contributors: silviapfeiffer1, johnfjohnf, nowotny  
 Donate link: http://www.gingertech.net/  
 Tags: videos, YouTube, Vimeo, DotSub  
 Requires at least: 2.9  
 Tested up to: 3.3.1  
-Stable Tag: 0.17  
+Stable Tag: 0.18  
 
 This is a WordPress post types plugin for videos posted to external social networking sites.
 
@@ -19,9 +19,7 @@ Description
 
 This plugin creates a new WordPress post type called "External Videos" and aggregates videos from a external social networking site's user channel to the WordPress instance. For example, it finds all the videos of the user "Fred" on YouTube and adds them each as a new post type. The videos can be presented in a gallery using the shortcode [external-videos]. There is also a widget to add a list of the most recent videos in a sidebar.
 
-While some aspects of this plugin do work on wordpress 2.9.2 it is
-really designed for 3.0+. When using 2.9 you will miss the following
-features:
+While some aspects of this plugin do work on wordpress 2.9.2 it is really designed for 3.0+. When using 2.9 you will miss the following features:
 
 * Admin Interface to list videos
 * Video page per video
@@ -63,10 +61,12 @@ We use OEmbed. For DotSub we use the service of embed.ly.
 ### What short codes are available?
 
 The general shortcode is [external-videos], which creates a video gallery.
+
 You can also now specify [external-videos feature="embed"] to get just the latest video as a featured video and with all its embedding code.
+
 You can further specify [external-videos width="300" height="200"] if you want to change the width and the height of the embedded video.
-And you can specify [external-videos link="page"] if you want to get the links on the video
-gallery to link straight through to the video pages instead of providing an overlay.
+
+And you can specify [external-videos link="page"] if you want to get the links on the video gallery to link straight through to the video pages instead of providing an overlay.
 
 ### How can I get a RSS feed URL for the external videos?
 
@@ -87,6 +87,12 @@ Screenshots
 
 Changelog
 ---------
+
+### 0.18
+* fixed styling of "Add Media" dialog in admin section again
+* added localization support
+* added Polish translation file
+* added English translation file
 
 ### 0.17
 * bug fix on thumbnail option to sidebar widget
