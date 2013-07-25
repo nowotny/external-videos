@@ -125,7 +125,7 @@ function sp_ev_save_video($video) {
 // by Chris Jean, chris@ithemes.com
 add_filter( 'pre_get_posts', 'sp_ev_filter_query_post_type' );
 function sp_ev_filter_query_post_type( $query ) {
-    if ( $query->query_vars['suppress_filters'] || ( ! is_category() && ! is_tag() ) )
+    if (empty($query->query_vars['suppress_filters']) || ( ! is_category() && ! is_tag() ) )
         return $query;
    
     $post_type = get_query_var( 'post_type' );
@@ -495,7 +495,7 @@ function sp_ev_settings_page() {
 
 add_action('admin_menu', 'sp_external_videos_options');
 function sp_external_videos_options() {
-  add_options_page(__('External Videos Settings', 'external-videos'), __('External Videos', 'external-videos'), 10, __FILE__, 'sp_ev_settings_page');
+  add_options_page(__('External Videos Settings', 'external-videos'), __('External Videos', 'external-videos'), 'administrator', __FILE__, 'sp_ev_settings_page');
 }
 
 
